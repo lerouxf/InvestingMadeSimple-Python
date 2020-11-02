@@ -1,0 +1,54 @@
+{% load static %}
+
+<html>
+
+<head>
+    <title>Investing made simple</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+</head>
+
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    {% include "navbar.html" %}
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Calculator -->
+        {% include "calculator.html" %}
+
+        <!-- How to invest ? -->
+        {% include "howToInvest.html" %}
+
+        <!-- Portfolio suggestions -->
+        {% include "suggestions.html" %}
+
+        <!-- Contact -->
+        {% include "contact.html" %}
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p class="copyright">By Félix Leroux</p>
+    </footer>
+
+</div>
+
+<!-- BG -->
+<div id="bg"></div>
+
+<!-- Scripts -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/browser.min.js' %}"></script>
+<script src="{% static 'js/breakpoints.min.js' %}"></script>
+<script src="{% static 'js/utils.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

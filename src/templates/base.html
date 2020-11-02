@@ -1,0 +1,16 @@
+{% load static %}
+{% load bootstrap4 %}
+
+<article id={% block id %}{% endblock %}>
+
+    <h1 class="major">
+        {% block title %}
+        <!-- Replace title -->
+        {% endblock %}
+    </h1>
+
+    {% block content %}
+    <!-- Replace content -->
+    {% endblock %}
+
+</article>

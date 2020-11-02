@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block id %}
+suggestions
+{% endblock %}
+
+{% block title %}
+Portfolio suggestions
+{% endblock %}
+
+{% block content %}
+
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-colorschemes"></script>
+<script src="https://unpkg.com/chartjs-plugin-colorschemes"></script>
+
+<div>
+    <div>
+        Exchange traded funds, or "ETFs" for short, are a great way to get diversification at a low cost. Because ETFs
+        contain multiple stocks, they are a lot safer than buying individual stocks. For these reasons, our portfolio
+        suggestions contain exclusively ETFs.
+    </div>
+    <h3>3 examples specific to a risk tolerance</h3>
+    <ul>
+        <li>
+            <strong>
+                Safe
+            </strong>
+            <div>
+                <canvas id="pieLow" width="800" height="450"></canvas>
+                <div>
+                    This simple portfolio gives you exposure to the whole stock market and is very safe for long
+                    term investing.
+                </div>
+                <div class="py-3">
+                    <strong>ETF examples</strong>
+                    <ul>
+                        <li>- Globally diversified ETFs: VGRO and VEQT</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                Moderate
+            </strong>
+            <div>
+                <canvas class="py-4" id="pieModerate" width="800" height="450"></canvas>
+                <div>
+                    <div>
+                        This portfolio gives you exposure to the biggest companies in the world, those will give you
+                        good long term growth. It will also provide you with some good passive income, thanks to the
+                        REITS and dividend stocks ETFs.
+                    </div>
+                    <strong>ETF examples</strong>
+                    <ul>
+                        <li>- S&P 500: VFV</li>
+                        <li>- Technology: HXQ, TEC</li>
+                        <li>- REITS: VRE, XRE, ZRE</li>
+                        <li>- Dividend stocks: VDY, XEI</li>
+                        <li>- Global exposure: XEF</li>
+                        <li>- Aggregate bonds: VAB</li>
+                        <li>- Federal bonds: VAB</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                Risky
+            </strong>
+            <div>
+                <canvas class="py-4" id="pieRisky" width="800" height="450"></canvas>
+                <div>
+                    <div>
+                        This portfolio is similar to the moderate risk portfolio, but it puts more emphasis on the
+                        SP500 (the 500 largest US companies) and on the technology sector, which has been the best
+                        performing sector of the last decade. This portfolio does not have bond exposure, so it is
+                        better suited for younger investors, or people with a relatively long investing horizon in
+                        front of them.
+                    </div>
+                    <strong>ETF examples</strong>
+                    <ul>
+                        <li>- S&P 500: VFV</li>
+                        <li>- Technology: HXQ, TEC</li>
+                        <li>- REITS: VRE, XRE, ZRE</li>
+                        <li>- Dividend stocks: VDY, XEI</li>
+                        <li>- Global exposure: XEF</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script src="{% static 'js/pie.js' %}"></script>
+{% endblock %}

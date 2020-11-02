@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block id %}
+calculator
+{% endblock %}
+
+{% block title %}
+Investment calculator
+{% endblock %}
+
+{% block content %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+<div>
+    <center>
+        <div>
+            <h3>
+                A simple tool that helps you estimate your investment's returns.
+            </h3>
+            <div>
+                Years of growth: <strong id="yearsOfGrowth"></strong>
+                <button class="btn btn-success" onclick="removeYear()">-</button>
+                <button class="btn btn-success" onclick="addYear()">+</button>
+            </div>
+            <div>
+                Starting amount: <strong id="startingAmount"></strong>
+                <button class="btn btn-success" onclick="removeMoney()">-</button>
+                <button class="btn btn-success" onclick="addMoney()">+</button>
+            </div>
+            <div>
+                Estimated average annual return: <strong id="annualReturn"></strong>
+                <button class="btn btn-success" onclick="removeAnnualReturn()">-</button>
+                <button class="btn btn-success" onclick="addAnnualReturn()">+</button>
+            </div>
+        </div>
+        <h3>
+            Your final portfolio value :
+            <strong id="endAmount"></strong>
+        </h3>
+    </center>
+    <div>
+        <canvas class="" id="chart" height="100" width="200"></canvas>
+    </div>
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+{% endblock %}
