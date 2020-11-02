@@ -1,6 +1,5 @@
-from django.contrib import messages
 from django.core.mail import send_mail
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 
 
 def suggestions_view(request, *args, **kwargs):
