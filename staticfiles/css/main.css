@@ -23,12 +23,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-div {
-    padding-bottom: 20px;
+a {
+    color: white;
 }
 
-hc {
-    text-align: center;
+div {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 body {
@@ -1206,6 +1207,7 @@ input, select, textarea {
 		width: 100%;
 		padding: 4rem 2rem;
 		z-index: 3;
+		padding-bottom: 0px;
 	}
 
 		#wrapper:before {

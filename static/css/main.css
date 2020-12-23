@@ -23,6 +23,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+a {
+    color: white;
+}
+
 div {
     padding-top: 10px;
     padding-bottom: 10px;

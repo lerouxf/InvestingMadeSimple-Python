@@ -1,0 +1,20 @@
+{% extends 'forum/base-forum.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="content-section py-5">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset>
+                <legend class="border-bottom">Delete a question</legend>
+                <h4 class="text-center">Are you sure you want to delete the following question?</h4>
+                <h5 class="text-center">"{{ object.title }}"</h5>
+            </fieldset>
+            <div class="text-center">
+                <button class="btn btn-outline-danger" type="submit">Yes</button>
+                <a class="btn btn-outline-secondary" href="{% url 'question-detail' object.id %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

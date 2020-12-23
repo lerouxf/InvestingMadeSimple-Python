@@ -1,0 +1,27 @@
+{% extends 'forum/base-forum.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% if message in messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} my-2">
+    {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
+{% for question in questions %}
+<div class="card my-4">
+    <div class="card-body">
+        <h2 class="card-title"><a href="{% url 'question-detail' question.id %}">{{ question.title }}</a></h2>
+        <p class="card-text">{{ question.content }}</p>
+    </div>
+    <div class="card-footer text-muted">
+        Posted on {{ question.date_posted|date:"F d, Y" }} by {{ question.author }}
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

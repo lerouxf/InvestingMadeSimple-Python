@@ -36,8 +36,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'pages',
     'bootstrap4',
+    'myproject',
+    'users.apps.UsersConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +136,15 @@ EMAIL_HOST_USER = 'investingMadeSimpleMail@gmail.com'
 EMAIL_HOST_PASSWORD = 'femlaudgiujzmvcp'
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'forum-home'
+
+# Admin username : felix
+# Admin pass : 321django
+
+# username: testuser
+# pass : 321django
+
+
